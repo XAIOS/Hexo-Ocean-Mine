@@ -1,0 +1,13 @@
+<footer class="footer">
+  <% if (theme.sidebar === 'bottom'){ %>
+    <%- partial('_partial/sidebar') %>
+  <% } %>
+  <div class="outer">
+    <ul class="list-inline">
+      <li>&copy; <%= date(new Date, 'YYYY') %> <%= config.title %></li>
+      <li><%= __('Powered by') %> <a href="https://hexo.io/" target="_blank">Hexo</a></li>
+      <li><%= __('Theme by ') %> <a href="https://zhwangart.github.io" target=_blank>zhwangart</a></li>
+      <li>Content by <a href="https://github.com/xaios" target=_blank><%= config.author %></a></li>
+    </ul>
+  </div>
+</footer>

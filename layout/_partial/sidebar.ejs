@@ -1,0 +1,26 @@
+<button class="navbar-toggle"></button>
+
+<nav class="navbar">
+  <% if (theme.brand){ %>
+    <div class="logo">
+      <img src="<%- theme.brand %>" alt="<%= config.title %>">
+    </div>
+  <% } %>
+  <ul class="nav nav-main">
+    <% for (var i in theme.menu){ %>
+      <li class="nav-item">
+        <a class="nav-item-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+      </li>
+    <% } %>
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="<%= __('search') %>">
+        <i class="fe fe-search"></i>
+        <%- theme.search_text %>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<div class="search-form-wrap">
+  <%- partial('post/search') %>
+</div>
